@@ -11,9 +11,7 @@ from langchain_community.document_loaders import (
 class DocumentProcessor:
     """Utilizing document loading and processing"""
 
-    def __int__(self, chunk_size: int = 700, chunk_overlap: int = 100):
-        self.chunk_size = chunk_size
-        self.chunk_overlap = chunk_overlap
+    def __init__(self, chunk_size: int = 700, chunk_overlap: int = 100):
         self.splitter = RecursiveCharacterTextSplitter(
             chunk_size=chunk_size,
             chunk_overlap=chunk_overlap
@@ -29,5 +27,5 @@ class DocumentProcessor:
         )
         return loader.load()
 
-    def split_documents(self, documents: List[Document]) -> List[Document]:
-        return self.splitter.split_documents(documents)
+    # def split_documents(self, documents: List[Document]) -> List[Document]:
+    #     return self.splitter.split_documents(documents)

@@ -7,3 +7,4 @@ class RAGState(BaseModel):
     question: str
     retrieved_docs: List[Document] = []
     answer: str = ""
+    is_relevant: str = ""

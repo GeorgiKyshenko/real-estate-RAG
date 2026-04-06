@@ -24,8 +24,8 @@ class VectorStore:
                 "Vector store is missing. It must be initialize by calling 'create_retriever' function")
         return self.retriever
 
-    def retrieve(self, query: str) -> List[Document]:
-        try:
-            self.retriever.invoke(query)
-        except Exception as e:
-            raise ValueError(f"Vector store not initialized. {e}")
+    # def retrieve(self, query: str) -> List[Document]:
+    #     try:
+    #         self.retriever.invoke(query)
+    #     except Exception as e:
+    #         raise ValueError(f"Vector store not initialized. {e}")
